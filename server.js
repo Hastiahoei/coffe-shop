@@ -1,4 +1,3 @@
-/
 
 /******** Requiring libraries ********/
 var express = require('express');
