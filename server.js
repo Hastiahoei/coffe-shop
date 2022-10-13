@@ -1,9 +1,4 @@
-/*
-* @Author: alireza-saberi
-* @Date:   2016-11-02 18:43:25
-* @Last Modified by:   alireza-saberi
-* @Last Modified time: 2016-11-02 18:44:00
-*/
+/
 
 /******** Requiring libraries ********/
 var express = require('express');
