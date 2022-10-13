@@ -1,9 +1,4 @@
-/*
-* @Author: alireza-saberi
-* @Date:   2016-10-30 23:29:55
-* @Last Modified by:   alireza-saberi
-* @Last Modified time: 2016-11-03 08:52:49
-*/
+
 var espressos = {  type:  'Espresso',
                    varieties: [{    name:'Caffè Mocha',
                                     count: 0,
