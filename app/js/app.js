@@ -1,5 +1,5 @@
 
-var espressos = {  type:  'Espresso',
+let espressos = {  type:  'Espresso',
                    varieties: [{    name:'Caffè Mocha',
                                     count: 0,
                                     baseprice: 5.99,
@@ -32,7 +32,7 @@ var espressos = {  type:  'Espresso',
                 };
 
 
-var coffees = {     type:  'Coffee',
+let coffees = {     type:  'Coffee',
                     varieties: [
                         {
                             name:'Caffè Misto',
@@ -65,7 +65,7 @@ var coffees = {     type:  'Coffee',
                     ]
             };
 
-var teas = {        type:  'Tea',
+let teas = {        type:  'Tea',
                     varieties: [
                     {
                         name:'Earl Grey',
@@ -97,7 +97,7 @@ var teas = {        type:  'Tea',
                     ]
             };
 
-var smoothies = {   type:  'Smoothie',
+let smoothies = {   type:  'Smoothie',
                     varieties: [{
                         name: 'Chocolate Smoothie',
                         count : 0,
@@ -128,7 +128,7 @@ var smoothies = {   type:  'Smoothie',
                     }]
                 };
 
-var drinks = [
+let drinks = [
      espressos,
      coffees,
      teas,
@@ -136,7 +136,7 @@ var drinks = [
 ];
 
 
-var app = new Vue({
+ app = new Vue({
     el: '#app',
     data: {
         drinks : drinks,
@@ -147,16 +147,14 @@ var app = new Vue({
     // },
     methods: {
         /**
-        * Total amount of order is a calculated tax free when the user press order
-        * @author Ali
-        * @name order
+        
         */
         order : function(){
-            var main_price = 0, side_price = 0;
-            for (var i = 0; i < this.drinks.length; i++ ){
-                for(var j = 0; j < this.drinks[i].varieties.length; j++){
+            let main_price = 0, side_price = 0;
+            for (let i = 0; i < this.drinks.length; i++ ){
+                for(let j = 0; j < this.drinks[i].varieties.length; j++){
                     main_price = main_price + (this.drinks[i].varieties[j].baseprice) * (this.drinks[i].varieties[j].count);
-                    for(var k = 0; k < this.drinks[i].varieties[j].modifiers.length; k++){
+                    for(let k = 0; k < this.drinks[i].varieties[j].modifiers.length; k++){
                         side_price = side_price + (this.drinks[i].varieties[j].modifiers[k].price * this.drinks[i].varieties[j].modifiers[k].count);
                     }
                 }
