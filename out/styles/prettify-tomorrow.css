@@ -1,8 +1,3 @@
-/* Tomorrow Theme */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-/* Pretty printing styles. Used with prettify.js. */
-/* SPAN elements with the classes below are added by prettyprint. */
-/* plain text */
 .pln {
   color: #4d4d4c; }
 
@@ -94,16 +89,7 @@
 
   .atv {
     color: #060; } }
-/* Style */
-/*
-pre.prettyprint {
-  background: white;
-  font-family: Consolas, Monaco, 'Andale Mono', monospace;
-  font-size: 12px;
-  line-height: 1.5;
-  border: 1px solid #ccc;
-  padding: 10px; }
-*/
+
 
 /* Specify class=linenums on a pre to get line numbering */
 ol.linenums {
