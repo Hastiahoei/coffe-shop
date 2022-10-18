@@ -19,11 +19,6 @@
 
     <h1 class="page-title">Source: app.js</h1>
 
-    
-
-
-
-    
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/*
@@ -32,8 +27,8 @@
 * @Last Modified by:   alireza-saberi
 * @Last Modified time: 2016-11-03 08:52:49
 */
-var espressos = {  type:  'Espresso',
-                   varieties: [{    name:'Caffè Mocha',
+let espressos = {  type:  'Espresso',
+                   letieties: [{    name:'Caffè Mocha',
                                     count: 0,
                                     baseprice: 5.99,
                                     src: 'img/mocha.jpg',
@@ -65,8 +60,8 @@ var espressos = {  type:  'Espresso',
                 };
 
 
-var coffees = {     type:  'Coffee',
-                    varieties: [
+let coffees = {     type:  'Coffee',
+                    letieties: [
                         {
                             name:'Caffè Misto',
                             count: 0,
@@ -98,8 +93,8 @@ var coffees = {     type:  'Coffee',
                     ]
             };
 
-var teas = {        type:  'Tea',
-                    varieties: [
+let teas = {        type:  'Tea',
+                    letieties: [
                     {
                         name:'Earl Grey',
                         count: 0,
@@ -130,8 +125,8 @@ var teas = {        type:  'Tea',
                     ]
             };
 
-var smoothies = {   type:  'Smoothie',
-                    varieties: [{
+let smoothies = {   type:  'Smoothie',
+                    letieties: [{
                         name: 'Chocolate Smoothie',
                         count : 0,
                         baseprice: 4.99,
@@ -161,7 +156,7 @@ var smoothies = {   type:  'Smoothie',
                     }]
                 };
 
-var drinks = [
+let drinks = [
      espressos,
      coffees,
      teas,
@@ -169,7 +164,7 @@ var drinks = [
 ];
 
 
-var app = new Vue({
+let app = new Vue({
     el: '#app',
     data: {
         drinks : drinks,
@@ -179,17 +174,13 @@ var app = new Vue({
     //     this.loadDrinks();
     // },
     methods: {
-        /**
-        * Total amount of order is a calculated tax free when the user press order
-        * @author Ali
-        * @name order
-        */
+       
         order : function(){
-            var main_price = 0, side_price = 0;
-            for (var i = 0; i &lt; this.drinks.length; i++ ){
-                for(var j = 0; j &lt; this.drinks[i].varieties.length; j++){
+            let main_price = 0, side_price = 0;
+            for (let i = 0; i &lt; this.drinks.length; i++ ){
+                for(let j = 0; j &lt; this.drinks[i].varieties.length; j++){
                     main_price = main_price + (this.drinks[i].varieties[j].baseprice) * (this.drinks[i].varieties[j].count);
-                    for(var k = 0; k &lt; this.drinks[i].varieties[j].modifiers.length; k++){
+                    for(let k = 0; k &lt; this.drinks[i].varieties[j].modifiers.length; k++){
                         side_price = side_price + (this.drinks[i].varieties[j].modifiers[k].price * this.drinks[i].varieties[j].modifiers[k].count);
                     }
                 }
@@ -220,9 +211,6 @@ var app = new Vue({
 </code></pre>
         </article>
     </section>
-
-
-
 
 </div>
 
